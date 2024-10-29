@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3CG Electric - Professional Electrical Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('/api/placeholder/1920/1080') center/cover;
+            height: 60vh;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-blue-600">3CG Electric</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#" class="text-gray-800 hover:text-blue-600 px-3 py-2">Home</a>
+                        <a href="#services" class="text-gray-800 hover:text-blue-600 px-3 py-2">Services</a>
+                        <a href="#about" class="text-gray-800 hover:text-blue-600 px-3 py-2">About</a>
+                        <a href="#videos" class="text-gray-800 hover:text-blue-600 px-3 py-2">Videos</a>
+                        <a href="#contact" class="text-gray-800 hover:text-blue-600 px-3 py-2">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section flex items-center justify-center">
+        <div class="text-center text-white">
+            <h1 class="text-5xl font-bold mb-4">Professional Electrical Services</h1>
+            <p class="text-xl mb-8">Reliable, Safe, and Efficient Solutions for Your Electrical Needs</p>
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                Get a Free Quote
+            </a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-home text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Residential Services</h3>
+                    <p class="text-gray-600">Complete electrical solutions for your home, from repairs to installations.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-building text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Commercial Services</h3>
+                    <p class="text-gray-600">Comprehensive electrical services for businesses and commercial properties.</p>
+                </div>
+                <div class="service-card bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-tools text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Maintenance</h3>
+                    <p class="text-gray-600">Regular maintenance and emergency repair services available 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Gallery Section -->
+    <section id="videos" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Recent Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Video placeholders - Replace src with actual YouTube/Vimeo embeds -->
+                <div class="aspect-w-16 aspect-h-9">
+                    <img src="/api/placeholder/640/360" alt="Video placeholder" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="aspect-w-16 aspect-h-9">
+                    <img src="/api/placeholder/640/360" alt="Video placeholder" class="rounded-lg shadow-lg w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">About 3CG Electric</h2>
+                    <p class="text-gray-600 mb-4">
+                        With years of experience in the electrical industry, we pride ourselves on providing top-quality 
+                        electrical services to both residential and commercial clients.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Our team of licensed electricians is committed to safety, reliability, and customer satisfaction.
+                    </p>
+                    <ul class="list-none space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            Licensed & Insured
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            24/7 Emergency Service
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-600 mr-2"></i>
+                            100% Satisfaction Guaranteed
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="/api/placeholder/600/400" alt="About Us" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="name">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="email">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2" for="message">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div>
+                    <!-- Replace with actual Google Maps embed -->
+                    <div class="h-96 bg-gray-300 rounded-lg">
+                        <img src="/api/placeholder/600/400" alt="Map placeholder" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">3CG Electric</h3>
+                    <p class="text-gray-400">Professional electrical services for residential and commercial needs.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-400">Phone: (555) 123-4567</p>
+                    <p class="text-gray-400">Email: info@3cgelectric.com</p>
+                    <p class="text-gray-400">Address: 123 Main St, City, State 12345</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 3CG Electric. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
