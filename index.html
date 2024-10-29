@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcefqJ6iU0sxnKqK3NPlkBc4C3LNlt2rA&callback=initMap" async defer onerror="handleMapError()"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3CG Electric - Professional Electrical Services</title>
+    <title>3CG Electric LLC - Professional Electrical Services in Youngsville, LA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <!-- Add Google Maps API script here once you have the key -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script> -->
     <style>
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -24,15 +27,18 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <a href="#" class="text-2xl font-bold text-blue-600">3CG Electric</a>
+                    <a href="#" class="flex items-center">
+                        <!-- Add your logo image here -->
+                        <span class="text-2xl font-bold text-red-600">3CG Electric LLC</span>
+                    </a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-4">
-                        <a href="#" class="text-gray-800 hover:text-blue-600 px-3 py-2">Home</a>
-                        <a href="#services" class="text-gray-800 hover:text-blue-600 px-3 py-2">Services</a>
-                        <a href="#about" class="text-gray-800 hover:text-blue-600 px-3 py-2">About</a>
-                        <a href="#videos" class="text-gray-800 hover:text-blue-600 px-3 py-2">Videos</a>
-                        <a href="#contact" class="text-gray-800 hover:text-blue-600 px-3 py-2">Contact</a>
+                        <a href="#" class="text-gray-800 hover:text-red-600 px-3 py-2">Home</a>
+                        <a href="#services" class="text-gray-800 hover:text-red-600 px-3 py-2">Services</a>
+                        <a href="#about" class="text-gray-800 hover:text-red-600 px-3 py-2">About</a>
+                        <a href="#videos" class="text-gray-800 hover:text-red-600 px-3 py-2">Gallery</a>
+                        <a href="#contact" class="text-gray-800 hover:text-red-600 px-3 py-2">Contact</a>
                     </div>
                 </div>
             </div>
@@ -43,9 +49,9 @@
     <header class="hero-section flex items-center justify-center">
         <div class="text-center text-white">
             <h1 class="text-5xl font-bold mb-4">Professional Electrical Services</h1>
-            <p class="text-xl mb-8">Reliable, Safe, and Efficient Solutions for Your Electrical Needs</p>
-            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
-                Get a Free Quote
+            <p class="text-xl mb-8">Serving Youngsville and Surrounding Areas</p>
+            <a href="tel:3372579747" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
+                Call (337) 257-9747
             </a>
         </div>
     </header>
@@ -56,70 +62,19 @@
             <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="service-card bg-white p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-home text-4xl text-blue-600 mb-4"></i>
+                    <i class="fas fa-home text-4xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Residential Services</h3>
-                    <p class="text-gray-600">Complete electrical solutions for your home, from repairs to installations.</p>
+                    <p class="text-gray-600">Complete electrical solutions for your home.</p>
                 </div>
                 <div class="service-card bg-white p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-building text-4xl text-blue-600 mb-4"></i>
+                    <i class="fas fa-building text-4xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Commercial Services</h3>
-                    <p class="text-gray-600">Comprehensive electrical services for businesses and commercial properties.</p>
+                    <p class="text-gray-600">Professional electrical services for businesses.</p>
                 </div>
                 <div class="service-card bg-white p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-tools text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Maintenance</h3>
-                    <p class="text-gray-600">Regular maintenance and emergency repair services available 24/7.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Video Gallery Section -->
-    <section id="videos" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Recent Projects</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Video placeholders - Replace src with actual YouTube/Vimeo embeds -->
-                <div class="aspect-w-16 aspect-h-9">
-                    <img src="/api/placeholder/640/360" alt="Video placeholder" class="rounded-lg shadow-lg w-full">
-                </div>
-                <div class="aspect-w-16 aspect-h-9">
-                    <img src="/api/placeholder/640/360" alt="Video placeholder" class="rounded-lg shadow-lg w-full">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold mb-6">About 3CG Electric</h2>
-                    <p class="text-gray-600 mb-4">
-                        With years of experience in the electrical industry, we pride ourselves on providing top-quality 
-                        electrical services to both residential and commercial clients.
-                    </p>
-                    <p class="text-gray-600 mb-4">
-                        Our team of licensed electricians is committed to safety, reliability, and customer satisfaction.
-                    </p>
-                    <ul class="list-none space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-blue-600 mr-2"></i>
-                            Licensed & Insured
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-blue-600 mr-2"></i>
-                            24/7 Emergency Service
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-blue-600 mr-2"></i>
-                            100% Satisfaction Guaranteed
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="/api/placeholder/600/400" alt="About Us" class="rounded-lg shadow-lg">
+                    <i class="fas fa-tools text-4xl text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Emergency Services</h3>
+                    <p class="text-gray-600">24/7 emergency electrical repairs.</p>
                 </div>
             </div>
         </div>
@@ -131,28 +86,41 @@
             <h2 class="text-4xl font-bold text-center mb-12">Contact Us</h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <form class="space-y-6">
+                    <form id="contactForm" class="space-y-6">
                         <div>
                             <label class="block text-gray-700 mb-2" for="name">Name</label>
-                            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500">
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-2" for="email">Email</label>
-                            <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500">
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-2" for="message">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500"></textarea>
                         </div>
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg">
+                        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
                             Send Message
                         </button>
                     </form>
                 </div>
                 <div>
-                    <!-- Replace with actual Google Maps embed -->
-                    <div class="h-96 bg-gray-300 rounded-lg">
-                        <img src="/api/placeholder/600/400" alt="Map placeholder" class="w-full h-full object-cover rounded-lg">
+                    <div id="map" class="h-96 bg-gray-300 rounded-lg">
+                        <!-- Google Maps will be initialized here -->
+                    </div>
+                    <div class="mt-6 space-y-2">
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-red-600 mr-2"></i>
+                            403 Lafayette St., Youngsville, LA
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone text-red-600 mr-2"></i>
+                            <a href="tel:3372579747">(337) 257-9747</a>
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-envelope text-red-600 mr-2"></i>
+                            <a href="mailto:npcomeaux@gmail.com">npcomeaux@gmail.com</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -164,32 +132,23 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">3CG Electric</h3>
-                    <p class="text-gray-400">Professional electrical services for residential and commercial needs.</p>
+                    <h3 class="text-xl font-bold mb-4">3CG Electric LLC</h3>
+                    <p class="text-gray-400">Professional electrical services in Youngsville, LA and surrounding areas.</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Info</h3>
-                    <p class="text-gray-400">Phone: (555) 123-4567</p>
-                    <p class="text-gray-400">Email: info@3cgelectric.com</p>
-                    <p class="text-gray-400">Address: 123 Main St, City, State 12345</p>
+                    <p class="text-gray-400">Phone: (337) 257-9747</p>
+                    <p class="text-gray-400">Email: npcomeaux@gmail.com</p>
+                    <p class="text-gray-400">Address: 403 Lafayette St., Youngsville, LA</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
+                    <h3 class="text-xl font-bold mb-4">Hours</h3>
+                    <p class="text-gray-400">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p class="text-gray-400">24/7 Emergency Service Available</p>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2024 3CG Electric. All rights reserved.</p>
+                <p class="text-gray-400">&copy; 2024 3CG Electric LLC. All rights reserved.</p>
             </div>
         </div>
     </footer>
