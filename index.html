@@ -6,22 +6,14 @@
     <title>3CG Electric LLC - Professional Electrical Services in Youngsville, LA</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
-    <script src="js/contact.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Custom Scripts -->
     <script src="js/main.js"></script>
-    <style>
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('/api/placeholder/1920/1080') center/cover;
-            height: 60vh;
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            transition: transform 0.3s ease;
-        }
-    </style>
-
-    <!-- Add this just before closing </head> tag -->
+    <script src="js/contact.js"></script>
     <script src="js/maps.js"></script>
+    
+    <!-- Google Maps (must be last) -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcefqJ6iU0sxnKqK3NPlkBc4C3LNlt2rA&callback=initMap" async defer></script>
 </head>
 <body class="bg-gray-50">
@@ -30,21 +22,33 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <a href="#" class="flex items-center">
-                        <!-- Add your logo image here -->
+                    <a href="index.html" class="flex items-center">
                         <span class="text-2xl font-bold text-red-600">3CG Electric LLC</span>
                     </a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-4">
-                        <a href="#" class="text-gray-800 hover:text-red-600 px-3 py-2">Home</a>
-                        <a href="#services" class="text-gray-800 hover:text-red-600 px-3 py-2">Services</a>
-                        <a href="#about" class="text-gray-800 hover:text-red-600 px-3 py-2">About</a>
-                        <a href="#videos" class="text-gray-800 hover:text-red-600 px-3 py-2">Gallery</a>
+                        <a href="index.html" class="text-gray-800 hover:text-red-600 px-3 py-2">Home</a>
+                        <a href="services.html" class="text-gray-800 hover:text-red-600 px-3 py-2">Services</a>
+                        <a href="about.html" class="text-gray-800 hover:text-red-600 px-3 py-2">About</a>
+                        <a href="gallery.html" class="text-gray-800 hover:text-red-600 px-3 py-2">Gallery</a>
                         <a href="#contact" class="text-gray-800 hover:text-red-600 px-3 py-2">Contact</a>
                     </div>
                 </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-800 hover:text-red-600 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Home</a>
+            <a href="services.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Services</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">About</a>
+            <a href="gallery.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Gallery</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Contact</a>
         </div>
     </nav>
 
@@ -53,13 +57,18 @@
         <div class="text-center text-white">
             <h1 class="text-5xl font-bold mb-4">Professional Electrical Services</h1>
             <p class="text-xl mb-8">Serving Youngsville and Surrounding Areas</p>
-            <a href="tel:3372579747" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
-                Call (337) 257-9747
-            </a>
+            <div class="space-x-4">
+                <a href="tel:3372579747" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
+                    Call (337) 257-9747
+                </a>
+                <a href="services.html" class="bg-white hover:bg-gray-100 text-red-600 font-bold py-3 px-6 rounded-lg">
+                    Our Services
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Services Section -->
+    <!-- Featured Services -->
     <section id="services" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
@@ -67,18 +76,101 @@
                 <div class="service-card bg-white p-6 rounded-lg shadow-lg">
                     <i class="fas fa-home text-4xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Residential Services</h3>
-                    <p class="text-gray-600">Complete electrical solutions for your home.</p>
+                    <p class="text-gray-600 mb-4">Complete electrical solutions for your home.</p>
+                    <a href="services.html#residential" class="text-red-600 hover:text-red-700">Learn More →</a>
                 </div>
                 <div class="service-card bg-white p-6 rounded-lg shadow-lg">
                     <i class="fas fa-building text-4xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Commercial Services</h3>
-                    <p class="text-gray-600">Professional electrical services for businesses.</p>
+                    <p class="text-gray-600 mb-4">Professional electrical services for businesses.</p>
+                    <a href="services.html#commercial" class="text-red-600 hover:text-red-700">Learn More →</a>
                 </div>
                 <div class="service-card bg-white p-6 rounded-lg shadow-lg">
-                    <i class="fas fa-tools text-4xl text-red-600 mb-4"></i>
+                    <i class="fas fa-bolt text-4xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Emergency Services</h3>
-                    <p class="text-gray-600">24/7 emergency electrical repairs.</p>
+                    <p class="text-gray-600 mb-4">24/7 emergency electrical repairs.</p>
+                    <a href="services.html#emergency" class="text-red-600 hover:text-red-700">Learn More →</a>
                 </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="services.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg">
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Why Choose Us</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <i class="fas fa-certificate text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Licensed & Insured</h3>
+                        <p class="text-gray-600">Fully licensed electrical contractors</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <i class="fas fa-clock text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">24/7 Service</h3>
+                        <p class="text-gray-600">Emergency services available</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <i class="fas fa-smile text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Satisfaction</h3>
+                        <p class="text-gray-600">100% customer satisfaction</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <i class="fas fa-dollar-sign text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Fair Pricing</h3>
+                        <p class="text-gray-600">Competitive, transparent rates</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Recent Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                    <img src="/api/placeholder/400/300" alt="Project 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="flex items-center justify-center h-full">
+                            <a href="gallery.html" class="text-white text-lg font-bold">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                    <img src="/api/placeholder/400/300" alt="Project 2" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="flex items-center justify-center h-full">
+                            <a href="gallery.html" class="text-white text-lg font-bold">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-lg shadow-lg group">
+                    <img src="/api/placeholder/400/300" alt="Project 3" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="flex items-center justify-center h-full">
+                            <a href="gallery.html" class="text-white text-lg font-bold">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="gallery.html" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg">
+                    View All Projects
+                </a>
             </div>
         </div>
     </section>
@@ -92,15 +184,18 @@
                     <form id="contactForm" class="space-y-6">
                         <div>
                             <label class="block text-gray-700 mb-2" for="name">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500" required>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500">
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-2" for="email">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500" required>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500">
                         </div>
                         <div>
                             <label class="block text-gray-700 mb-2" for="message">Message</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500" required></textarea>
+                            <textarea id="message" name="message" rows="4" required
+                                      class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-red-500"></textarea>
                         </div>
                         <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
                             Send Message
@@ -108,7 +203,7 @@
                     </form>
                 </div>
                 <div class="flex flex-col">
-                    <div id="map" class="w-full h-[400px] rounded-lg shadow-lg mb-6" style="min-height: 400px;"></div>
+                    <div id="map" class="w-full h-[400px] rounded-lg shadow-lg mb-6"></div>
                     <div class="space-y-3 mt-4">
                         <p class="flex items-center">
                             <i class="fas fa-map-marker-alt text-red-600 mr-2"></i>

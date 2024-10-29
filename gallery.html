@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gallery - 3CG Electric LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center">
+                        <span class="text-2xl font-bold text-red-600">3CG Electric LLC</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="index.html" class="text-gray-800 hover:text-red-600 px-3 py-2">Home</a>
+                        <a href="services.html" class="text-gray-800 hover:text-red-600 px-3 py-2">Services</a>
+                        <a href="about.html" class="text-gray-800 hover:text-red-600 px-3 py-2">About</a>
+                        <a href="gallery.html" class="text-gray-800 hover:text-red-600 px-3 py-2">Gallery</a>
+                        <a href="index.html#contact" class="text-gray-800 hover:text-red-600 px-3 py-2">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-800 hover:text-red-600 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Home</a>
+            <a href="services.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Services</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">About</a>
+            <a href="gallery.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Gallery</a>
+            <a href="index.html#contact" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero -->
+    <header class="pt-28 pb-12 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Project Gallery</h1>
+            <p class="text-xl text-gray-300">View Our Recent Work and Completed Projects</p>
+        </div>
+    </header>
+
+    <!-- Project Categories -->
+    <section class="py-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="px-6 py-2 bg-red-600 text-white rounded-full hover:bg-red-700 focus:outline-none">
+                    All Projects
+                </button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 focus:outline-none">
+                    Residential
+                </button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 focus:outline-none">
+                    Commercial
+                </button>
+                <button class="px-6 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 focus:outline-none">
+                    Emergency Repairs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Videos -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12">Project Videos</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video Item 1 -->
+                <div class="video-container relative aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <div class="video-thumbnail cursor-pointer h-full" 
+                         data-video-id="YOUTUBE_VIDEO_ID_1" 
+                         data-video-type="youtube">
+                        <img src="/api/placeholder/400/225" alt="Video Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                            <i class="fas fa-play-circle text-4xl text-white hover:text-red-600 transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 2 -->
+                <div class="video-container relative aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <div class="video-thumbnail cursor-pointer h-full" 
+                         data-video-id="YOUTUBE_VIDEO_ID_2" 
+                         data-video-type="youtube">
+                        <img src="/api/placeholder/400/225" alt="Video Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                            <i class="fas fa-play-circle text-4xl text-white hover:text-red-600 transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Item 3 -->
+                <div class="video-container relative aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+                    <div class="video-thumbnail cursor-pointer h-full" 
+                         data-video-id="YOUTUBE_VIDEO_ID_3" 
+                         data-video-type="youtube">
+                        <img src="/api/placeholder/400/225" alt="Video Thumbnail" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                            <i class="fas fa-play-circle text-4xl text-white hover:text-red-600 transition-colors"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12">Project Photos</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Photo Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/api/placeholder/400/300" alt="Project Photo" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+                            <h3 class="font-bold">Residential Installation</h3>
+                            <p class="text-sm">Complete home electrical upgrade</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Photo Items -->
+                <!-- Copy and paste the above photo item structure for more photos -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Comparisons -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12">Before & After</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Comparison 1 -->
+                <div class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <img src="/api/placeholder/300/200" alt="Before" class="w-full h-48 object-cover rounded-lg shadow">
+                            <p class="text-center mt-2 font-bold">Before</p>
+                        </div>
+                        <div>
+                            <img src="/api/placeholder/300/200" alt="After" class="w-full h-48 object-cover rounded-lg shadow">
+                            <p class="text-center mt-2 font-bold">After</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold">Panel Upgrade</h3>
+                        <p class="text-gray-600">Modernized electrical panel installation</p>
+                    </div>
+                </div>
+
+                <!-- Additional Before/After Comparisons -->
+                <!-- Copy and paste the above comparison structure for more examples -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-8">Ready to Start Your Project?</h2>
+            <p class="text-xl text-gray-300 mb-8">Contact us today for a free consultation.</p>
+            <div class="space-x-4">
+                <a href="tel:3372579747" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg">
+                    Call Now
+                </a>
+                <a href="index.html#contact" class="inline-block bg-white hover:bg-gray-100 text-red-600 font-bold py-3 px-8 rounded-lg">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">3CG Electric LLC</h3>
+                    <p class="text-gray-400">Professional electrical services in Youngsville, LA and surrounding areas.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-400">Phone: (337) 257-9747</p>
+                    <p class="text-gray-400">Email: npcomeaux@gmail.com</p>
+                    <p class="text-gray-400">Address: 403 Lafayette St., Youngsville, LA</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hours</h3>
+                    <p class="text-gray-400">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p class="text-gray-400">24/7 Emergency Service Available</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 3CG Electric LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
