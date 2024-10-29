@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.textContent = 'Sending...';
             
             try {
-                // Using Formspree - Replace 'YOUR_FORM_ID' with the actual form ID
+                // Using Formspree - Replace 'YOUR_FORM_ID' with the actual form ID after setting up Formspree
                 const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
                     method: 'POST',
                     body: new FormData(this),
@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 if (response.ok) {
-                    // Show success message
                     alert('Thank you for your message! We will get back to you soon.');
                     this.reset();
                 } else {
@@ -37,15 +36,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Form validation
-    const inputs = contactForm.querySelectorAll('input, textarea');
-    inputs.forEach(input => {
-        input.addEventListener('invalid', function(e) {
-            e.preventDefault();
-            this.classList.add('border-red-500');
-        });
+    if (contactForm) {
+        const inputs = contactForm.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('invalid', function(e) {
+                e.preventDefault();
+                this.classList.add('border-red-500');
+            });
 
-        input.addEventListener('input', function() {
-            this.classList.remove('border-red-500');
+            input.addEventListener('input', function() {
+                this.classList.remove('border-red-500');
+            });
         });
-    });
+    }
 });

@@ -1,4 +1,8 @@
 // Google Maps initialization for 3CG Electric
+let map;
+let marker;
+let infoWindow;
+
 function initMap() {
     // 403 Lafayette St., Youngsville, LA coordinates
     const companyLocation = { 
@@ -10,6 +14,8 @@ function initMap() {
     const mapOptions = {
         zoom: 15,
         center: companyLocation,
+        mapTypeControl: true,
+        streetViewControl: true,
         styles: [
             {
                 "featureType": "poi",
@@ -22,13 +28,13 @@ function initMap() {
     };
 
     // Create the map
-    const map = new google.maps.Map(
+    map = new google.maps.Map(
         document.getElementById('map'), 
         mapOptions
     );
 
     // Custom marker options
-    const marker = new google.maps.Marker({
+    marker = new google.maps.Marker({
         position: companyLocation,
         map: map,
         title: '3CG Electric LLC',
@@ -37,16 +43,16 @@ function initMap() {
 
     // Info window content
     const contentString = `
-        <div class="p-2">
-            <h3 class="font-bold mb-1">3CG Electric LLC</h3>
-            <p class="mb-1">403 Lafayette St.</p>
-            <p class="mb-1">Youngsville, LA</p>
-            <p class="mb-1"><a href="tel:3372579747">(337) 257-9747</a></p>
+        <div style="padding: 10px;">
+            <h3 style="font-weight: bold; margin-bottom: 5px;">3CG Electric LLC</h3>
+            <p style="margin: 2px 0;">403 Lafayette St.</p>
+            <p style="margin: 2px 0;">Youngsville, LA</p>
+            <p style="margin: 2px 0;"><a href="tel:3372579747">(337) 257-9747</a></p>
         </div>
     `;
 
     // Create info window
-    const infoWindow = new google.maps.InfoWindow({
+    infoWindow = new google.maps.InfoWindow({
         content: contentString
     });
 
@@ -54,6 +60,9 @@ function initMap() {
     marker.addListener('click', () => {
         infoWindow.open(map, marker);
     });
+
+    // Open info window by default
+    infoWindow.open(map, marker);
 }
 
 // Handle map load errors
@@ -76,3 +85,10 @@ function handleMapError() {
         `;
     }
 }
+
+// Make sure map is initialized when the window loads
+window.addEventListener('load', () => {
+    if (typeof google === 'undefined') {
+        handleMapError();
+    }
+});
