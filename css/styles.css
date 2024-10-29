@@ -248,3 +248,13 @@
         transform: translateY(-3px);
     }
 }
+
+/* Logo animations and effects */
+.logo-container img {
+    filter: drop-shadow(0 0 10px rgba(220, 38, 38, 0.3));
+    transition: all 0.3s ease;
+}
+
+.logo-container img:hover {
+    filter: drop-shadow(0 0 15px rgba(220, 38, 38, 0.5));
+}
