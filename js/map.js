@@ -4,14 +4,16 @@ let marker;
 let infoWindow;
 
 // Google Maps initialization for 3CG Electric
-function initMap() {
+
+
+window.initMap = function() {
     // Wait for DOM to be ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initializeMap);
     } else {
         initializeMap();
     }
-}
+};
 
 function initializeMap() {
     try {
