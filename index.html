@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3CG Electric LLC - Professional Electrical Services in Youngsville, LA</title>
+    <link rel="icon" type="image/png" href="images/3CG_Image.png">
     
     <!-- Stylesheets -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -58,9 +59,14 @@
     <!-- Hero Section -->
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
+            <!-- Background Logo -->
+            <div class="absolute inset-0 opacity-10 flex items-center justify-center">
+                <img src="images/3CG_LOGO_2.png" 
+                    alt="3CG Electric Logo Background"
+                    class="w-full h-full object-contain">
+            </div>
+            <!-- Gradient Overlay -->
             <div class="absolute inset-0 bg-gradient-to-r from-black/80 to-black/50 z-10"></div>
-            <img src="/api/placeholder/1920/1080" alt="Electrical Work" 
-                 class="w-full h-full object-cover object-center animate-subtle-zoom">
         </div>
         <div class="relative z-20 text-center px-4 max-w-5xl mx-auto animate-slide-up">
             <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -72,14 +78,14 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <a href="tel:3372579747" 
-                   class="hover-button bg-red-600 text-white px-8 py-4 rounded-lg shadow-lg hover:bg-red-700 transition-all transform hover:scale-105">
+                class="hover-button bg-red-600 text-white px-8 py-4 rounded-lg shadow-lg hover:bg-red-700 transition-all transform hover:scale-105">
                     <span class="flex items-center justify-center">
                         <i class="fas fa-phone mr-2"></i>
                         Call (337) 257-9747
                     </span>
                 </a>
                 <a href="#services" 
-                   class="hover-button bg-white text-red-600 px-8 py-4 rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105">
+                class="hover-button bg-white text-red-600 px-8 py-4 rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105">
                     <span class="flex items-center justify-center">
                         <i class="fas fa-bolt mr-2"></i>
                         Explore Services
