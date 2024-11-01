@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - 3CG Electric LLC</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation bar (reuse your existing code) -->
+
+    <!-- Customer Upload Form Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Upload Your Panel Image</h2>
+            <p class="text-lg text-gray-700 mb-6">Take a picture of your panel, give a brief description, and we’ll get back to you with a quote.</p>
+            
+            <form action="mailto:3cg.customersupport@example.com" method="post" enctype="multipart/form-data" class="space-y-6">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <label class="block text-gray-700 mb-2" for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-500">
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <label class="block text-gray-700 mb-2" for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required class="form-input w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-500">
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <label class="block text-gray-700 mb-2" for="description">Brief Description</label>
+                    <textarea id="description" name="description" rows="4" class="form-input w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-500" placeholder="Describe the issue or service needed..."></textarea>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <label class="block text-gray-700 mb-2" for="panelImage">Upload Panel Image</label>
+                    <input type="file" id="panelImage" name="panelImage" accept="image/*" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-500">
+                </div>
+                
+                <button type="submit" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Real Estate Agents Form Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Real Estate Agents</h2>
+            <p class="text-lg text-gray-700 mb-6">If you're a real estate agent, upload relevant files here, and we’ll follow up with you.</p>
+            
+            <form action="mailto:3cg.customersupport@example.com" method="post" enctype="multipart/form-data" class="space-y-6">
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <label class="block text-gray-700 mb-2" for="agentName">Your Name</label>
+                    <input type="text" id="agentName" name="agentName" required class="form-input w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-500">
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <label class="block text-gray-700 mb-2" for="agentEmail">Email Address</label>
+                    <input type="email" id="agentEmail" name="agentEmail" required class="form-input w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-500">
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <label class="block text-gray-700 mb-2" for="fileUpload">Upload File</label>
+                    <input type="file" id="fileUpload" name="fileUpload" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-red-500">
+                </div>
+                
+                <button type="submit" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-colors">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- About Section -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">3CG Electric LLC</h3>
+                    <p class="text-gray-400">Professional electrical services in Youngsville, LA, and surrounding areas.</p>
+                </div>
+                <!-- Contact Info Section -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <p class="text-gray-400"><i class="fas fa-phone mr-2"></i>(337) 257-9747</p>
+                    <p class="text-gray-400"><i class="fas fa-envelope mr-2"></i>npcomeaux@gmail.com</p>
+                    <p class="text-gray-400"><i class="fas fa-map-marker-alt mr-2"></i>403 Lafayette St., Youngsville, LA</p>
+                </div>
+                <!-- Hours of Operation Section -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Hours</h3>
+                    <p class="text-gray-400">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p class="text-gray-400">24/7 Emergency Service Available</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 3CG Electric LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
