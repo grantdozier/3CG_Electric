@@ -1,29 +1,38 @@
 // Main JavaScript file for 3CG Electric website
 
-// Execute when DOM is fully loaded
+// Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu functionality
+    // Mobile menu elements
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const mobileMenu = document.querySelector('.mobile-menu');
 
+    // Toggle mobile menu visibility
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Close menu when clicking a menu item
+        const mobileMenuItems = mobileMenu.querySelectorAll('a');
+        mobileMenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
     }
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+    // Handle mobile menu visibility on resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) { // md breakpoint
+            mobileMenu.classList.add('hidden');
+        }
     });
 
     // Contact form handling
@@ -194,15 +203,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Initial check
-
-    // Handle mobile menu clicks
-    document.addEventListener('click', (e) => {
-        if (mobileMenu && mobileMenu.classList.contains('active')) {
-            if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
-                mobileMenu.classList.remove('active');
-            }
-        }
-    });
 
     // Add touch support for mobile devices
     let touchStartY = 0;
