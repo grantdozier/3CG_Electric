@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 // Get form data
                 const formData = new FormData(this);
-
+                
                 // Handle file uploads
-                const fileInput = this.querySelector('#images');
-                if (fileInput.files.length > 0) {
+                const fileInput = this.querySelector('#attachment');
+                if (fileInput && fileInput.files.length > 0) {
                     // Remove any existing file entries
                     formData.delete('attachment');
                     
@@ -28,12 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }
 
-                // Add metadata
+                // Add the current date/time to the form data
                 formData.append('submission_date', new Date().toLocaleString());
-                formData.append('_format', 'json');
 
                 // Send to Formspree
-                const response = await fetch('https://formspree.io/f/movqdvlg', {
+                const response = await fetch(this.action, {
                     method: 'POST',
                     body: formData,
                     headers: {
@@ -88,36 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Form validation and UI feedback
-        const inputs = quoteForm.querySelectorAll('input:not([type="hidden"]), textarea, select');
-        inputs.forEach(input => {
-            input.addEventListener('invalid', function(e) {
-                e.preventDefault();
-                this.classList.add('border-red-500');
-                
-                // Remove any existing error message
-                const existingError = this.parentNode.querySelector('.text-red-500');
-                if (existingError) {
-                    existingError.remove();
-                }
-                
-                // Add new error message
-                const errorMessage = document.createElement('p');
-                errorMessage.className = 'text-red-500 text-sm mt-1';
-                errorMessage.textContent = this.validationMessage;
-                this.parentNode.appendChild(errorMessage);
-            });
-
-            input.addEventListener('input', function() {
-                this.classList.remove('border-red-500');
-                // Remove error message if it exists
-                const errorMessage = this.parentNode.querySelector('.text-red-500');
-                if (errorMessage) {
-                    errorMessage.remove();
-                }
-            });
-        });
-
         // Phone number formatting
         const phoneInput = quoteForm.querySelector('#phone');
         if (phoneInput) {
@@ -144,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // File upload validation
-        const imageInput = quoteForm.querySelector('#images');
+        const imageInput = quoteForm.querySelector('#attachment');
         if (imageInput) {
             imageInput.addEventListener('change', function(e) {
                 const files = Array.from(this.files);
