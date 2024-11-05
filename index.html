@@ -60,17 +60,13 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <!-- Background Logo -->
-            <div class="absolute inset-0 opacity-20 flex items-start justify-center">
-                <img src="images/3CG_LOGO_2.png" 
-                    alt="3CG Electric Logo Background"
-                    class="w-3/4 h-3/4 object-contain mt-[22rem]"> <!-- Changed from 32rem to 24rem -->
-            </div>
-            <!-- Gradient Overlay -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 z-10"></div> <!-- Lighter gradient -->
+    <header class="hero-section h-screen flex items-center justify-center">
+        <!-- Overlay Logo -->
+        <div class="overlay-logo">
+            <img src="images/residential/3CG_LOGO_2.png" alt="3CG Electric Logo Overlay">
         </div>
+    
+        <!-- Content Goes Here -->
         <div class="relative z-20 text-center px-4 max-w-6xl mx-auto animate-slide-up mt-16">
             <h1 class="text-6xl md:text-8xl font-bold text-white mb-8">
                 <span class="block mb-4">Professional</span>
@@ -81,14 +77,14 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-8 justify-center">
                 <a href="tel:3372579747" 
-                class="hover-button bg-red-600 text-white px-10 py-5 rounded-lg shadow-lg hover:bg-red-700 transition-all transform hover:scale-105 text-xl">
+                   class="hover-button bg-red-600 text-white px-10 py-5 rounded-lg shadow-lg hover:bg-red-700 transition-all transform hover:scale-105 text-xl">
                     <span class="flex items-center justify-center">
                         <i class="fas fa-phone mr-3"></i>
                         Call (337) 257-9747
                     </span>
                 </a>
                 <a href="#services" 
-                class="hover-button bg-white text-red-600 px-10 py-5 rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105 text-xl">
+                   class="hover-button bg-white text-red-600 px-10 py-5 rounded-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105 text-xl">
                     <span class="flex items-center justify-center">
                         <i class="fas fa-bolt mr-3"></i>
                         Explore Services
@@ -96,6 +92,7 @@
                 </a>
             </div>
         </div>
+    
         <!-- Scroll Indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <a href="#services" class="text-white opacity-75 hover:opacity-100 transition-opacity">
@@ -103,6 +100,7 @@
             </a>
         </div>
     </header>
+    
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-white">
