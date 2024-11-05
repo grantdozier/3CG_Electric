@@ -11,20 +11,28 @@ document.addEventListener('DOMContentLoaded', function() {
             const originalText = submitButton.textContent;
             submitButton.textContent = 'Sending Request...';
             submitButton.disabled = true;
-            
+
             try {
-                // Using Formspree - Replace 'YOUR_FORM_ID' with the actual form ID
+                // Get form data
                 const formData = new FormData(this);
                 
                 // Handle file uploads
                 const fileInput = this.querySelector('#images');
                 if (fileInput.files.length > 0) {
+                    // Remove any existing file entries
+                    formData.delete('images');
+                    
+                    // Add each file individually
                     Array.from(fileInput.files).forEach((file, index) => {
-                        formData.append(`image${index + 1}`, file);
+                        formData.append('images', file);
                     });
                 }
 
-                const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                // Add the current date/time to the form data
+                formData.append('submission_date', new Date().toLocaleString());
+
+                // Send to Formspree
+                const response = await fetch(this.action, {
                     method: 'POST',
                     body: formData,
                     headers: {
@@ -34,14 +42,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (response.ok) {
                     // Success message
-                    alert('Thank you for your quote request! We will review your information and get back to you soon.');
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4';
+                    successMessage.innerHTML = `
+                        <strong class="font-bold">Success!</strong>
+                        <span class="block sm:inline ml-2">Thank you for your quote request! We will review your information and get back to you soon.</span>
+                    `;
+                    
+                    this.insertAdjacentElement('beforebegin', successMessage);
                     this.reset();
+
+                    // Remove success message after 5 seconds
+                    setTimeout(() => {
+                        successMessage.remove();
+                    }, 5000);
+
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
-                    throw new Error('Failed to send message');
+                    throw new Error('Form submission failed');
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert('There was an error sending your request. Please try again later or contact us directly.');
+                
+                // Error message
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4';
+                errorMessage.innerHTML = `
+                    <strong class="font-bold">Error!</strong>
+                    <span class="block sm:inline ml-2">There was a problem submitting your request. Please try again or contact us directly.</span>
+                `;
+                
+                this.insertAdjacentElement('beforebegin', errorMessage);
+
+                // Remove error message after 5 seconds
+                setTimeout(() => {
+                    errorMessage.remove();
+                }, 5000);
             } finally {
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;
@@ -51,15 +88,30 @@ document.addEventListener('DOMContentLoaded', function() {
         // Form validation and UI feedback
         const inputs = quoteForm.querySelectorAll('input, textarea, select');
         inputs.forEach(input => {
-            // Show validation feedback
             input.addEventListener('invalid', function(e) {
                 e.preventDefault();
                 this.classList.add('border-red-500');
+                
+                // Remove any existing error message
+                const existingError = this.parentNode.querySelector('.text-red-500');
+                if (existingError) {
+                    existingError.remove();
+                }
+                
+                // Add new error message
+                const errorMessage = document.createElement('p');
+                errorMessage.className = 'text-red-500 text-sm mt-1';
+                errorMessage.textContent = this.validationMessage;
+                this.parentNode.appendChild(errorMessage);
             });
 
-            // Remove error styling on input
             input.addEventListener('input', function() {
                 this.classList.remove('border-red-500');
+                // Remove error message if it exists
+                const errorMessage = this.parentNode.querySelector('.text-red-500');
+                if (errorMessage) {
+                    errorMessage.remove();
+                }
             });
         });
 
@@ -85,6 +137,38 @@ document.addEventListener('DOMContentLoaded', function() {
                     value = value.slice(0, 5);
                 }
                 e.target.value = value;
+            });
+        }
+
+        // File upload validation
+        const imageInput = quoteForm.querySelector('#images');
+        if (imageInput) {
+            imageInput.addEventListener('change', function(e) {
+                const files = Array.from(this.files);
+                const maxSize = 10 * 1024 * 1024; // 10MB max size
+                const allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+                
+                // Remove any existing error messages
+                const existingError = this.parentNode.querySelector('.text-red-500');
+                if (existingError) {
+                    existingError.remove();
+                }
+
+                // Validate each file
+                const invalidFiles = files.filter(file => {
+                    return file.size > maxSize || !allowedTypes.includes(file.type);
+                });
+
+                if (invalidFiles.length > 0) {
+                    // Create error message
+                    const errorMessage = document.createElement('p');
+                    errorMessage.className = 'text-red-500 text-sm mt-1';
+                    errorMessage.textContent = 'Please select images under 10MB in JPG, PNG, or GIF format.';
+                    this.parentNode.appendChild(errorMessage);
+                    
+                    // Clear the file input
+                    this.value = '';
+                }
             });
         }
     }

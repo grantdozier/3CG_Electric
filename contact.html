@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request a Quote - 3CG Electric LLC</title>
+    <link rel="icon" type="image/png" href="images/3CG_Image.png">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <script src="js/contact.js" defer></script>
 </head>
 <body class="bg-gray-50">
     <!-- Customer Quote Request Section -->
@@ -19,7 +21,9 @@
                 Please fill out the form below with details about your electrical service needs.
             </p>
             
-            <form id="quoteForm" class="max-w-3xl mx-auto space-y-6">
+            <form id="quoteForm" class="max-w-3xl mx-auto space-y-6" action="https://formspree.io/f/movqdvlg" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_subject" value="New Quote Request from 3CG Electric Website">
+                
                 <!-- Service Type Selection -->
                 <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
                     <label class="block text-gray-700 mb-2 text-lg font-semibold" for="serviceType">Type of Service Needed</label>
