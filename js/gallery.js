@@ -1,16 +1,10 @@
 // In js/gallery.js
 const videos = [
     {
-        id: "YOUTUBE_VIDEO_ID_1",
-        title: "First Project Video",
-        description: "Description of first project"
-    },
-    {
-        id: "YOUTUBE_VIDEO_ID_2",
-        title: "Second Project Video",
-        description: "Description of second project"
-    },
-    // Add more video objects as needed
+        id: "4gSAqPJ3JOA",
+        title: "3CG Electric Project Video",
+        description: "Electrical work showcase and installations"
+    }
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -32,9 +26,9 @@ function createVideoElement(video) {
     div.className = 'video-container relative aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg';
     div.innerHTML = `
         <div class="video-thumbnail cursor-pointer h-full" data-video-id="${video.id}">
-            <img src="https://img.youtube.com/vi/${video.id}/maxresdefault.jpg" 
-                 alt="${video.title}" 
-                 class="w-full h-full object-cover">
+            <img src="https://img.youtube.com/vi/${video.id}/maxresdefault.jpg"
+                  alt="${video.title}"
+                  class="w-full h-full object-cover">
             <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
                 <i class="fas fa-play-circle text-4xl text-white hover:text-red-600 transition-colors"></i>
             </div>
