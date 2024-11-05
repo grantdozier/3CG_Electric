@@ -15,30 +15,33 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 // Get form data
                 const formData = new FormData(this);
-                
+
                 // Handle file uploads
                 const fileInput = this.querySelector('#images');
                 if (fileInput.files.length > 0) {
                     // Remove any existing file entries
-                    formData.delete('images');
+                    formData.delete('attachment');
                     
                     // Add each file individually
                     Array.from(fileInput.files).forEach((file, index) => {
-                        formData.append('images', file);
+                        formData.append('attachment', file);
                     });
                 }
 
-                // Add the current date/time to the form data
+                // Add metadata
                 formData.append('submission_date', new Date().toLocaleString());
+                formData.append('_format', 'json');
 
                 // Send to Formspree
-                const response = await fetch(this.action, {
+                const response = await fetch('https://formspree.io/f/movqdvlg', {
                     method: 'POST',
                     body: formData,
                     headers: {
                         'Accept': 'application/json'
                     }
                 });
+
+                const responseData = await response.json();
 
                 if (response.ok) {
                     // Success message
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Scroll to success message
                     successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
-                    throw new Error('Form submission failed');
+                    throw new Error(responseData.error || 'Form submission failed');
                 }
             } catch (error) {
                 console.error('Error:', error);
@@ -86,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Form validation and UI feedback
-        const inputs = quoteForm.querySelectorAll('input, textarea, select');
+        const inputs = quoteForm.querySelectorAll('input:not([type="hidden"]), textarea, select');
         inputs.forEach(input => {
             input.addEventListener('invalid', function(e) {
                 e.preventDefault();
