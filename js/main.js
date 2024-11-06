@@ -1,6 +1,7 @@
 // Main JavaScript file for 3CG Electric website
-// Main JavaScript file for 3CG Electric website
 
+
+// Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Add the logo-checking code right here, at the top of the function
     const logoImage = document.querySelector('.logo-image');
@@ -13,17 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Logo image loaded successfully');
         };
     }
-
-    // Leave all the existing code below
-    // Mobile menu elements
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
-
-    // Rest of your existing JavaScript...
-});
-
-// Mobile menu functionality
-document.addEventListener('DOMContentLoaded', function() {
+    
     // Mobile menu elements
     const mobileMenuButton = document.querySelector('.mobile-menu-button');
     const mobileMenu = document.querySelector('.mobile-menu');
