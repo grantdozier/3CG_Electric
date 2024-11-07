@@ -96,30 +96,6 @@
 }
 
 
-@media (max-width: 767px) {
-    .hero-section {
-        background-position: center center;
-        background-size: cover;
-    }
-
-    header.relative {
-        height: 100vh;
-    }
-
-    header.relative .absolute.inset-0 img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        transform: translate(-50%, -50%);
-        object-fit: cover;
-        z-index: 0;
-    }
-}
-
 /* Button Styles */
 .hover-button {
     transition: all 0.3s ease;
@@ -128,17 +104,6 @@
 .hover-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 640px) {
-    .hero-section .logo-overlay {
-        max-width: 300px;
-    }
-    
-    .hero-section p {
-        font-size: 1.5rem;
-    }
 }
 
 /* Card Hover Effects */
@@ -300,6 +265,18 @@
 
     .logo-image {
         max-height: 250px; /* Adjusted for mobile */
+    }
+
+    .hero-section .logo-overlay {
+        max-width: 300px;
+    }
+    
+    .hero-section p {
+        font-size: 1.5rem;
+    }
+
+    header.relative {
+        height: 100vh;
     }
 
     header.relative .absolute.inset-0 img {
