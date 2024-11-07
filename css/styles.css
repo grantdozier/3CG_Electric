@@ -80,7 +80,7 @@
 }
 
 .hero-section .logo-overlay {
-    max-width: 400px; /* Adjust this value as needed */
+    max-width: 400px;
     width: 100%;
     margin: 0 auto 2rem;
 }
@@ -94,7 +94,6 @@
 .hero-section p {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 
 /* Button Styles */
 .hover-button {
@@ -257,6 +256,22 @@
     opacity: 1;
 }
 
+/* Logo Container Styles */
+.logo-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 800px; /* Increased from 600px for larger web version */
+    margin: 0 auto 2rem;
+}
+
+.logo-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 400px; /* Increased from 300px for larger web version */
+}
+
 /* Mobile Adjustments */
 @media (max-width: 767px) {
     .logo-container {
@@ -283,8 +298,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        min-width: 200%; /* Increased zoom out for mobile background */
-        min-height: 200%; /* Increased zoom out for mobile background */
+        min-width: 250%; /* Increased zoom out for mobile background */
+        min-height: 250%; /* Increased zoom out for mobile background */
         width: auto;
         height: auto;
         transform: translate(-50%, -50%);
@@ -313,7 +328,7 @@
 .text-gradient {
     background: linear-gradient(45deg, #dc2626, #ef4444);
     -webkit-background-clip: text;
-    background-clip: text;  /* Add this line */
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -324,21 +339,4 @@
 .shadow-hover:hover {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
                 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Logo animations and effects */
-/* Logo Container Styles */
-.logo-container {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    max-width: 600px; /* Increased from 400px */
-    margin: 0 auto 2rem;
-}
-
-.logo-image {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    max-height: 300px; /* Increased from 200px */
 }
