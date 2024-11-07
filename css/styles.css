@@ -260,11 +260,11 @@
 /* Mobile Adjustments */
 @media (max-width: 767px) {
     .logo-container {
-        max-width: 400px; /* Slightly smaller on mobile */
+        max-width: 400px; /* Keep original mobile size */
     }
 
     .logo-image {
-        max-height: 250px; /* Adjusted for mobile */
+        max-height: 250px; /* Keep original mobile size */
     }
 
     .hero-section .logo-overlay {
@@ -283,8 +283,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        min-width: 150%; /* Zoom out background image */
-        min-height: 150%; /* Zoom out background image */
+        min-width: 200%; /* Increased zoom out for mobile background */
+        min-height: 200%; /* Increased zoom out for mobile background */
         width: auto;
         height: auto;
         transform: translate(-50%, -50%);
