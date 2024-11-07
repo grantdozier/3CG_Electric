@@ -95,16 +95,6 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* New media queries go here */
-@media (min-width: 768px) {
-    .logo-container {
-        max-width: 600px;
-    }
-
-    .logo-image {
-        max-height: 300px;
-    }
-}
 
 @media (max-width: 767px) {
     .hero-section {
@@ -302,6 +292,30 @@
     opacity: 1;
 }
 
+/* Mobile Adjustments */
+@media (max-width: 767px) {
+    .logo-container {
+        max-width: 400px; /* Slightly smaller on mobile */
+    }
+
+    .logo-image {
+        max-height: 250px; /* Adjusted for mobile */
+    }
+
+    header.relative .absolute.inset-0 img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 150%; /* Zoom out background image */
+        min-height: 150%; /* Zoom out background image */
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+        z-index: 0;
+    }
+}
+
 /* Optional: Add slide down animation */
 @keyframes slideDown {
     from {
@@ -335,23 +349,13 @@
                 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hero-section {
-        height: 80vh;
-    }
-    
-    .service-card:hover {
-        transform: translateY(-3px);
-    }
-}
-
 /* Logo animations and effects */
+/* Logo Container Styles */
 .logo-container {
     position: relative;
     z-index: 10;
     width: 100%;
-    max-width: 400px; /* Adjust as needed */
+    max-width: 600px; /* Increased from 400px */
     margin: 0 auto 2rem;
 }
 
@@ -359,5 +363,5 @@
     width: 100%;
     height: auto;
     object-fit: contain;
-    max-height: 200px; /* Adjust as needed */
+    max-height: 300px; /* Increased from 200px */
 }
