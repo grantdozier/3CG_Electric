@@ -1,7 +1,77 @@
-// Contact form handling
 document.addEventListener('DOMContentLoaded', function() {
+    // Original Quote Form handling
     const quoteForm = document.getElementById('quoteForm');
+    const contactForm = document.getElementById('contactForm');
     
+    // Contact Form Handling
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending Message...';
+            submitButton.disabled = true;
+
+            try {
+                // Get form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+                
+                // Format the email body with line breaks
+                const emailBody = `Name: ${name}%0D%0A%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+                
+                // Create the mailto link
+                const mailToLink = `mailto:contact@3cgelectric.com?subject=Contact Form Submission from ${name}&body=${emailBody}`;
+                
+                // Create success message before opening email client
+                const successMessage = document.createElement('div');
+                successMessage.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4';
+                successMessage.innerHTML = `
+                    <strong class="font-bold">Success!</strong>
+                    <span class="block sm:inline ml-2">Your email client should open shortly. If it doesn't, please contact us directly.</span>
+                `;
+                
+                this.insertAdjacentElement('beforebegin', successMessage);
+                
+                // Open user's email client
+                window.location.href = mailToLink;
+                
+                // Clear the form
+                this.reset();
+
+                // Remove success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.remove();
+                }, 5000);
+
+            } catch (error) {
+                console.error('Error:', error);
+                
+                // Error message
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mt-4';
+                errorMessage.innerHTML = `
+                    <strong class="font-bold">Error!</strong>
+                    <span class="block sm:inline ml-2">There was a problem opening your email client. Please try again or contact us directly at contact@3cgelectric.com</span>
+                `;
+                
+                this.insertAdjacentElement('beforebegin', errorMessage);
+
+                // Remove error message after 5 seconds
+                setTimeout(() => {
+                    errorMessage.remove();
+                }, 5000);
+            } finally {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
+        });
+    }
+
+    // Quote Form handling (your original code)
     if (quoteForm) {
         quoteForm.addEventListener('submit', async function(e) {
             e.preventDefault();
