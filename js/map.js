@@ -47,7 +47,7 @@ window.initializeMap = function() {
                 <h3 style="font-weight: bold; margin-bottom: 5px;">3CG Electric LLC</h3>
                 <p style="margin: 2px 0;">1105 Young St.</p>
                 <p style="margin: 2px 0;">Broussard, LA 70518</p>
-                <p style="margin: 2px 0;"><a href="tel:3372579747">(337) 257-9747</a></p>
+                <p style="margin: 2px 0;"><a href="tel:3372579747">contact@3cgelectric.com</a></p>
                 <p style="margin: 5px 0 0;">
                     <a href="https://www.google.com/maps/dir/?api=1&destination=1105+Young+St+Broussard+LA+70518" 
                        target="_blank" 
