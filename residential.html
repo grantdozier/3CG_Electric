@@ -11,8 +11,42 @@
 <body class="bg-gray-50">
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <!-- Reuse your navigation code here -->
+    <nav class="bg-white backdrop-blur-sm shadow-lg fixed w-full z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="images/3CG_Image.png" alt="3CG Electric" class="h-12 w-auto transition-transform hover:scale-105">
+                        <span class="text-2xl font-bold text-gradient md:hidden">3CG Electric LLC</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="index.html" class="nav-link text-gray-800 hover:text-red-600 px-3 py-2 transition-colors">Home</a>
+                        <a href="services.html" class="nav-link text-gray-800 hover:text-red-600 px-3 py-2 transition-colors">Services</a>
+                        <a href="about.html" class="nav-link text-gray-800 hover:text-red-600 px-3 py-2 transition-colors">About</a>
+                        <a href="gallery.html" class="nav-link text-gray-800 hover:text-red-600 px-3 py-2 transition-colors">Gallery</a>
+                        <a href="#contact" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors shadow-md hover:shadow-lg">Contact</a>
+                        <a href="contact.html" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors shadow-md hover:shadow-lg">Request a Quote</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <span class="mr-2 text-gray-800">MENU</span>
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-800 hover:text-red-600 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white absolute top-16 left-0 w-full border-b border-gray-200 shadow-lg z-50">
+            <a href="index.html" class="block px-6 py-3 text-gray-800 hover:bg-red-50 transition-colors">Home</a>
+            <a href="services.html" class="block px-6 py-3 text-gray-800 hover:bg-red-50 transition-colors">Services</a>
+            <a href="about.html" class="block px-6 py-3 text-gray-800 hover:bg-red-50 transition-colors">About</a>
+            <a href="gallery.html" class="block px-6 py-3 text-gray-800 hover:bg-red-50 transition-colors">Gallery</a>
+            <a href="#contact" class="block px-6 py-3 text-red-600 hover:bg-red-50 transition-colors">Contact</a>
+            <a href="contact.html" class="block px-6 py-3 text-red-600 hover:bg-red-50 transition-colors">Request a Quote</a>
+        </div>
     </nav>
 
     <!-- Hero Section -->
