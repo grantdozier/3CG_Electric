@@ -11,7 +11,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     
-    <script src="js/map.js" defer></script>
+    <!-- Initialize map function first -->
+    <script>
+        function initMap() {
+            // This ensures the function exists before Google Maps loads
+            if (window.initializeMap) {
+                window.initializeMap();
+            }
+        }
+    </script>
+    
+    <!-- Load map.js before Google Maps -->
+    <script src="js/map.js"></script>
+    
     <!-- Google Maps Script -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcefqJ6iU0sxnKqK3NPlkBc4C3LNlt2rA&callback=initMap" async defer></script>
     
@@ -317,7 +329,7 @@
                             <div class="space-y-4">
                                 <div class="flex items-center text-gray-700">
                                     <i class="fas fa-map-marker-alt text-red-600 text-xl w-8"></i>
-                                    <span>403 Lafayette St., Youngsville, LA</span>
+                                    <span>1105 Young St., Broussard, LA 70518</span>
                                 </div>
                                 <div class="flex items-center text-gray-700">
                                     <i class="fas fa-phone text-red-600 text-xl w-8"></i>
@@ -347,7 +359,7 @@
                         <div class="space-y-2 text-gray-400">
                             <p><i class="fas fa-phone mr-2"></i>(337) 257-9747</p>
                             <p><i class="fas fa-envelope mr-2"></i>npcomeaux@gmail.com</p>
-                            <p><i class="fas fa-map-marker-alt mr-2"></i>403 Lafayette St., Youngsville, LA</p>
+                            <p><i class="fas fa-map-marker-alt mr-2"></i>1105 Young St., Broussard, LA 70518</p>
                         </div>
                     </div>
                     <div>
