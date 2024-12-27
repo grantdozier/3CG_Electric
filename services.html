@@ -4,44 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - 3CG Electric LLC</title>
+    <link rel="icon" type="image/png" href="images/3CG_Image.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/main.js"></script>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
+    <nav class="bg-white backdrop-blur-sm shadow-lg fixed w-full z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="flex items-center">
-                        <span class="text-2xl font-bold text-red-600">3CG Electric LLC</span>
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="images/3CG_Image.png" alt="3CG Electric" class="h-12 w-auto transition-transform hover:scale-105">
+                        <span class="text-2xl font-bold text-gradient md:hidden">3CG Electric LLC</span>
                     </a>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-center space-x-4">
-                        <a href="index.html" class="text-gray-800 hover:text-red-600 px-3 py-2">Home</a>
-                        <a href="services.html" class="text-gray-800 hover:text-red-600 px-3 py-2">Services</a>
-                        <a href="about.html" class="text-gray-800 hover:text-red-600 px-3 py-2">About</a>
-                        <a href="gallery.html" class="text-gray-800 hover:text-red-600 px-3 py-2">Gallery</a>
-                        <a href="index.html#contact" class="text-gray-800 hover:text-red-600 px-3 py-2">Contact</a>
+                        <a href="index.html" class="nav-link text-gray-800 hover:text-red-600 px-3 py-2 transition-colors">Home</a>
+                        <a href="services.html" class="nav-link text-gray-800 hover:text-red-600 px-3 py-2 transition-colors">Services</a>
+                        <a href="about.html" class="nav-link text-gray-800 hover:text-red-600 px-3 py-2 transition-colors">About</a>
+                        <a href="gallery.html" class="nav-link text-gray-800 hover:text-red-600 px-3 py-2 transition-colors">Gallery</a>
+                        <a href="#contact" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors shadow-md hover:shadow-lg">Contact</a>
+                        <a href="contact.html" class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors shadow-md hover:shadow-lg">Request a Quote</a>
                     </div>
                 </div>
                 <div class="md:hidden">
+                    <span class="mr-2 text-gray-800">MENU</span>
                     <button class="mobile-menu-button p-2 rounded-md text-gray-800 hover:text-red-600 focus:outline-none">
-                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div class="mobile-menu hidden md:hidden">
-            <a href="index.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Home</a>
-            <a href="services.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Services</a>
-            <a href="about.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">About</a>
-            <a href="gallery.html" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Gallery</a>
-            <a href="index.html#contact" class="block px-4 py-2 text-gray-800 hover:bg-red-50">Contact</a>
+        <div class="mobile-menu hidden md:hidden bg-white absolute top-16 left-0 w-full border-b border-gray-200 shadow-lg z-50">
+            <a href="index.html" class="block px-6 py-3 text-gray-800 hover:bg-red-50 transition-colors">Home</a>
+            <a href="services.html" class="block px-6 py-3 text-gray-800 hover:bg-red-50 transition-colors">Services</a>
+            <a href="about.html" class="block px-6 py-3 text-gray-800 hover:bg-red-50 transition-colors">About</a>
+            <a href="gallery.html" class="block px-6 py-3 text-gray-800 hover:bg-red-50 transition-colors">Gallery</a>
+            <a href="#contact" class="block px-6 py-3 text-red-600 hover:bg-red-50 transition-colors">Contact</a>
+            <a href="contact.html" class="block px-6 py-3 text-red-600 hover:bg-red-50 transition-colors">Request a Quote</a>
         </div>
     </nav>
 
@@ -56,37 +60,52 @@
     <!-- Residential Services -->
     <section id="residential" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12">Residential Services</h2>
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">Residential Services</h2>
+                <a href="residential.html" class="text-red-600 hover:text-red-700 flex items-center">
+                    View All Residential Services 
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <i class="fas fa-plug text-3xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Electrical Installation</h3>
-                    <ul class="text-gray-600 space-y-2">
+                    <ul class="text-gray-600 space-y-2 mb-4">
                         <li>• New Construction Wiring</li>
                         <li>• Outlet Installation</li>
                         <li>• Lighting Fixtures</li>
                         <li>• Ceiling Fans</li>
                     </ul>
+                    <a href="residential.html" class="text-red-600 hover:text-red-700 inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <i class="fas fa-tools text-3xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Repairs & Maintenance</h3>
-                    <ul class="text-gray-600 space-y-2">
+                    <ul class="text-gray-600 space-y-2 mb-4">
                         <li>• Circuit Repairs</li>
                         <li>• Electrical Troubleshooting</li>
                         <li>• Panel Upgrades</li>
                         <li>• Safety Inspections</li>
                     </ul>
+                    <a href="residential.html" class="text-red-600 hover:text-red-700 inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <i class="fas fa-shield-alt text-3xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Safety & Protection</h3>
-                    <ul class="text-gray-600 space-y-2">
+                    <ul class="text-gray-600 space-y-2 mb-4">
                         <li>• Surge Protection</li>
                         <li>• GFCI Installation</li>
                         <li>• Smoke Detectors</li>
                         <li>• Child Safety Outlets</li>
                     </ul>
+                    <a href="residential.html" class="text-red-600 hover:text-red-700 inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -95,37 +114,52 @@
     <!-- Commercial Services -->
     <section id="commercial" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-12">Commercial Services</h2>
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">Commercial Services</h2>
+                <a href="commercial.html" class="text-red-600 hover:text-red-700 flex items-center">
+                    View All Commercial Services 
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <i class="fas fa-building text-3xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Commercial Installation</h3>
-                    <ul class="text-gray-600 space-y-2">
+                    <ul class="text-gray-600 space-y-2 mb-4">
                         <li>• Office Building Wiring</li>
                         <li>• Industrial Equipment</li>
                         <li>• Lighting Systems</li>
                         <li>• Power Distribution</li>
                     </ul>
+                    <a href="commercial.html" class="text-red-600 hover:text-red-700 inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <i class="fas fa-network-wired text-3xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Industrial Solutions</h3>
-                    <ul class="text-gray-600 space-y-2">
+                    <ul class="text-gray-600 space-y-2 mb-4">
                         <li>• Machine Installation</li>
                         <li>• Control Systems</li>
                         <li>• Equipment Maintenance</li>
                         <li>• Safety Compliance</li>
                     </ul>
+                    <a href="commercial.html" class="text-red-600 hover:text-red-700 inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-lg">
                     <i class="fas fa-chart-line text-3xl text-red-600 mb-4"></i>
                     <h3 class="text-xl font-bold mb-2">Energy Management</h3>
-                    <ul class="text-gray-600 space-y-2">
+                    <ul class="text-gray-600 space-y-2 mb-4">
                         <li>• Energy Audits</li>
                         <li>• LED Upgrades</li>
                         <li>• Power Factor Correction</li>
                         <li>• Efficiency Solutions</li>
                     </ul>
+                    <a href="commercial.html" class="text-red-600 hover:text-red-700 inline-flex items-center">
+                        Learn More <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -147,9 +181,9 @@
                             <p class="flex items-center"><i class="fas fa-check text-red-600 mr-2"></i> Rapid Problem Resolution</p>
                         </div>
                         <div class="mt-6">
-                            <a href="tel:3372579747" class="inline-flex items-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
-                                <i class="fas fa-phone mr-2"></i>
-                                Contact: contact@3cgelectric.com
+                            <a href="mailto:npcomeaux@gmail.com" class="inline-flex items-center bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg">
+                                <i class="fas fa-envelope mr-2"></i>
+                                Contact: npcomeaux@gmail.com
                             </a>
                         </div>
                     </div>
@@ -211,7 +245,7 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Follow Us</h3>
                     <div class="flex space-x-4">
-                        <a href="https://www.instagram.com/3cgelectricllc/profilecard/?igsh=MTA3MHUxenJhemwzbg==" 
+                        <a href="https://www.instagram.com/3cgelectric337/profilecard/?igsh=MXBub3lmNHRtM2w0cA==" 
                            target="_blank" 
                            class="text-gray-400 hover:text-pink-500 transition-colors">
                             <i class="fab fa-instagram text-2xl"></i>
